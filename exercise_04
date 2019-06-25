@@ -1,0 +1,5 @@
+type of error: uninitialized constant DockStation
+file path: /Users/username/.rvm/rubies/ruby-2.2.2/bin/irb:11in '<main>'
+line of the error: 1
+What error means: The code refers to a class or module that it can't find
+Way of solving error: Creating a class or creating a new module
