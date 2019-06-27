@@ -45,6 +45,23 @@ describe DockingStation do
   end
 end
 
+
+describe 'initialize' do
+  it 'Checking default' do
+    station = DockingStation.new
+    expect(station.capacity).to eq 20
+  end
+end
+
+
+describe 'initialize' do
+  it 'Checking default' do
+    station = DockingStation.new(30)
+    expect(station.capacity).to eq 30
+  end
+end
+
+
 #describe DockingStation do
 #it { should respond_to()}
 #end
