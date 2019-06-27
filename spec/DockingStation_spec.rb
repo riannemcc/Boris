@@ -19,6 +19,34 @@ describe DockingStation do
   end
 end
 
+describe DockingStation do
+  describe '#release_bike' do
+    it 'Message of broken bike' do
+      bike = Bike.new
+      bike.reported_broken(true)
+      station = DockingStation.new
+      station.dock(bike)
+      expect {station.release_bike}.to raise_error 'Broken bike'
+    end
+  end
+end
+
+describe DockingStation do
+  describe '#release_bike' do
+    it 'Message of broken bike' do
+      bike = Bike.new
+      bike.reported_broken(true)
+      station = DockingStation.new
+      station.dock(bike)
+      bike2 = Bike.new
+      station.dock(bike2)
+      bike3 = Bike.new
+      bike3.reported_broken(true)
+      station.dock(bike3)
+      expect {station.release_bike}.to raise_error 'Broken bike'
+    end
+  end
+end
 #  it { is_expected.to respond_to(:dock).with(1).argument }
 #  it 'docks some bike' do
 #    bike = Bike.new

@@ -12,6 +12,8 @@ DEFAULT_CAPACITY = 20
   def release_bike
     if empty?
       raise 'No bikes available'
+    elsif @bike_dock[-1].broken? == true
+      raise "Broken bike"
     else
       bike
     end
