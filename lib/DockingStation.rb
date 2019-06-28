@@ -48,7 +48,4 @@ DEFAULT_CAPACITY = 20
       false
     end
   end
-
-
-
 end
